@@ -16,7 +16,7 @@
         echo 'Chose an element or input 0 to exit: ' . PHP_EOL;
         foreach ($game->getChoices() as $key => $element)
         {
-            echo $key + 1 . ' : ' . $element->getName() . PHP_EOL;
+            echo $key + 1 . ' : ' . $element . PHP_EOL;
         }
         while (true) {
             $input = (int)readline('Your choice: ');
