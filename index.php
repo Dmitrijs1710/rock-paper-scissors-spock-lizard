@@ -14,12 +14,14 @@
     echo PHP_EOL;
     while(true) {
         echo 'Chose an element or input 0 to exit: ' . PHP_EOL;
-        foreach ($game->getChoices() as $key => $element) {
+        foreach ($game->getChoices() as $key => $element)
+        {
             echo $key + 1 . ' : ' . $element->getName() . PHP_EOL;
         }
         while (true) {
             $input = (int)readline('Your choice: ');
-            if ($input > 0 && $input <= count($game->getChoices())) {
+            if ($input > 0 && $input <= count($game->getChoices()))
+            {
                 break;
             } else if ($input===0)
             {

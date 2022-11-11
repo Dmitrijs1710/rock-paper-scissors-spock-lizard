@@ -14,11 +14,11 @@ class Element{
     }
     public function addWin(Element $element) :void
     {
-        $this->canWin[]=$element;
+        $this->canWin[] = $element;
     }
     public function addLose(Element $element) :void
     {
-        $this->loseTo[]=$element;
+        $this->loseTo[] = $element;
     }
 
     public function getCanWin(): array
