@@ -4,7 +4,7 @@ class RockPaperScissors{
     private array $choices;
 
 
-    public function __construct(?Player $player1=null, ?Player $player2=null)
+    public function __construct(?Player $player1 = null, ?Player $player2 = null)
     {
         $combinations =
         [
