@@ -71,7 +71,8 @@ class RockPaperScissors{
     }
 
     public function getResult(): string{
-        if($this->getPlayer1()===null || $this->getPlayer2()===null){
+        if($this->getPlayer1() === null || $this->getPlayer2() === null)
+        {
             return 'Not enough players';
         }
         if($this->player1->getElement() !== null && $this->player2->getElement() !== null)
