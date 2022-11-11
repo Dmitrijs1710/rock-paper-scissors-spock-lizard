@@ -10,13 +10,10 @@ class Element{
 
     public function __toString()
     {
-        return $this->getName();
-    }
-
-    public function getName(): string
-    {
         return $this->name;
     }
+
+
     public function addWin(Element $element) :void
     {
         $this->canWin[] = $element;

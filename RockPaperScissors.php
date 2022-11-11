@@ -45,41 +45,26 @@ class RockPaperScissors{
     }
 
 
-    /**
-     * @return Player|null
-     */
     public function getPlayer1(): ?Player
     {
         return $this->player1;
     }
 
-    /**
-     * @return Player|null
-     */
     public function getPlayer2(): ?Player
     {
         return $this->player2;
     }
 
-    /**
-     * @param Player|null $player1
-     */
     public function setPlayer1(?Player $player1): void
     {
         $this->player1 = $player1;
     }
 
-    /**
-     * @param Player|null $player2
-     */
     public function setPlayer2(?Player $player2): void
     {
         $this->player2 = $player2;
     }
 
-    /**
-     * @return array
-     */
     public function getChoices(): array
     {
         return $this->choices;

@@ -12,28 +12,17 @@ class Player
 
     public function __toString()
     {
-        return $this->getName();
-    }
-
-    /**
-     * @return string
-     */
-    public function getName(): string
-    {
         return $this->name;
     }
 
-    /**
-     * @return Element|null
-     */
+
+
     public function getElement(): ?Element
     {
         return $this->element;
     }
 
-    /**
-     * @param Element|null $element
-     */
+
     public function setElement(?Element $element): void
     {
         $this->element = $element;
