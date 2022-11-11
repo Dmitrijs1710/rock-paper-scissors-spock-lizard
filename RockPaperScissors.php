@@ -3,7 +3,10 @@ class RockPaperScissors{
     private ?Player $player1, $player2;
     private array $choices;
 
-    private array $combinations =
+
+    public function __construct(?Player $player1=null, ?Player $player2=null)
+    {
+        $combinations =
         [
             [ 1, 0 ],
             [ 2, 1 ],
@@ -16,8 +19,6 @@ class RockPaperScissors{
             [ 1, 3 ],
             [ 3, 0 ]
         ];
-    public function __construct(?Player $player1=null, ?Player $player2=null)
-    {
         $this->choices = [
                 new Element('Rock'),
                 new Element('Paper'),
@@ -27,7 +28,7 @@ class RockPaperScissors{
         ];
         foreach ($this->choices as $key=>$element)
         {
-            foreach ($this->combinations as $combination)
+            foreach ($combinations as $combination)
             {
                 [$p1,$p2] = $combination;
                 if($p1 === $key)
