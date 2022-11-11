@@ -97,7 +97,7 @@ class RockPaperScissors{
             if (in_array($this->player2->getElement(), $this->player1->getElement()->getLoseTo(), true)) {
                 return ($this->player2 . ' wins! ' . $this->player2->getElement() . ' beats ' . $this->player1->getElement());
             }
-            return ('It is a draw! ' . $this->player2->getElement()->getName() . ' is equal to ' . $this->player1->getElement()->getName());
+            return ('It is a draw! ' . $this->player2->getElement(). ' is equal to ' . $this->player1->getElement());
         }
         return('Players elements not set');
     }
