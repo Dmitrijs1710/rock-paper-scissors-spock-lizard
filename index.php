@@ -35,8 +35,8 @@
         echo PHP_EOL;
         $game->getPlayer1()->setElement($game->getChoices()[$input - 1]);
         $game->getPlayer2()->setElement($game->getChoices()[array_rand($game->getChoices())]);
-        echo $game->getPlayer1()->getName() . ' choice: ' . $game->getPlayer1()->getElement()->getName() . PHP_EOL;
-        echo $game->getPlayer2()->getName() . ' choice: ' . $game->getPlayer2()->getElement()->getName() . PHP_EOL;
+        echo $game->getPlayer1() . ' choice: ' . $game->getPlayer1()->getElement() . PHP_EOL;
+        echo $game->getPlayer2() . ' choice: ' . $game->getPlayer2()->getElement() . PHP_EOL;
         echo PHP_EOL;
         echo $game->getResult() . PHP_EOL;
         echo PHP_EOL . PHP_EOL;

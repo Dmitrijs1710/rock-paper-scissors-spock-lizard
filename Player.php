@@ -10,6 +10,11 @@ class Player
         $this->element = $element;
     }
 
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
     /**
      * @return string
      */

@@ -44,6 +44,7 @@ class RockPaperScissors{
 
     }
 
+
     /**
      * @return Player|null
      */
@@ -90,19 +91,11 @@ class RockPaperScissors{
         }
         if($this->player1->getElement() !== null && $this->player2->getElement() !== null)
         {
-            foreach ($this->player1->getElement()->getCanWin() as $element)
-            {
-                if($element->getName() === $this->player2->getElement()->getName())
-                {
-                    return($this->player1->getName() . ' wins! ' . $this->player1->getElement()->getName() . ' beats ' . $this->player2->getElement()->getName());
-                }
+            if (in_array($this->player2->getElement(), $this->player1->getElement()->getCanWin(), true)) {
+                return ($this->player1 . ' wins! ' . $this->player1->getElement() . ' beats ' . $this->player2->getElement());
             }
-            foreach ($this->player1->getElement()->getLoseTo() as $element)
-            {
-                if($element->getName() === $this->player2->getElement()->getName())
-                {
-                    return($this->player2->getName() . ' wins! ' . $this->player2->getElement()->getName() . ' beats ' . $this->player1->getElement()->getName());
-                }
+            if (in_array($this->player2->getElement(), $this->player1->getElement()->getLoseTo(), true)) {
+                return ($this->player2 . ' wins! ' . $this->player2->getElement() . ' beats ' . $this->player1->getElement());
             }
             return ('It is a draw! ' . $this->player2->getElement()->getName() . ' is equal to ' . $this->player1->getElement()->getName());
         }

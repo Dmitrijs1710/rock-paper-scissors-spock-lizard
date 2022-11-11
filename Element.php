@@ -8,6 +8,11 @@ class Element{
         $this->name = $name;
     }
 
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
     public function getName(): string
     {
         return $this->name;
