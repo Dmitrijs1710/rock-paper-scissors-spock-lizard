@@ -2,7 +2,6 @@
 class Element{
     private string $name;
     private array $canWin;
-    private array $loseTo;
     public function __construct(string $name)
     {
         $this->name = $name;
@@ -18,18 +17,11 @@ class Element{
     {
         $this->canWin[] = $element;
     }
-    public function addLose(Element $element) :void
-    {
-        $this->loseTo[] = $element;
-    }
+
 
     public function getCanWin(): array
     {
         return $this->canWin;
     }
 
-    public function getLoseTo(): array
-    {
-        return $this->loseTo;
-    }
 }
